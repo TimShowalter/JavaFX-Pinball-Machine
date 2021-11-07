@@ -1,0 +1,45 @@
+package JavaFXPinballMachine;
+
+import static java.awt.SystemColor.text;
+import javafx.application.Application; 
+import static javafx.application.Application.launch;
+import javafx.scene.Group;
+import javafx.scene.Scene; 
+import javafx.scene.paint.Color;
+import javafx.scene.control.Button; 
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage; 
+
+// Creating the class 
+public class JavaFXPinballMachine extends Application {
+    
+    Button button;
+    
+    public static void main(String[] args) {
+      launch(args); 
+    }
+    
+ @Override
+public void start(Stage primaryStage) throws Exception {
+    primaryStage.setTitle("Trojan Pinball");    // Setting Title of Stage
+    
+    
+        Text Gametitle = new Text(140, 100, "Trojan Pinball");
+        Gametitle.setFont(Font.font("Edwardian Script ITC", 20));
+        Group layout = new Group(Gametitle);
+        Scene scene1 = new Scene(layout, 400, 400, Color.RED);
+       
+         button = new Button();
+         button.setText("Start New Game");
+    
+    layout.getChildren().add(button); 
+    
+    primaryStage.setScene(scene1);   // Adding Scene to Stage 
+    primaryStage.show();            // Display contents of the Stage 
+}
+}
+
+
+
